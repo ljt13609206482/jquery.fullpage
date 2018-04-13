@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="js/jquery-1.7.2.js"></script>
+    <!-- 引入jquery文件 -->
     <script src="js/jquery.fullpage.min.js"></script>
 </head>
 <body>
-    <h1 id="h1"></h1>
+    <div id="fullpage">
+        <div class="section">第一屏</div>
+        <div class="section">第二屏</div>
+        <div class="section">
+            <div class="slide">第三屏的第一屏</div>
+            <div class="slide">第三屏的第二屏</div>
+            <div class="slide">第三屏的第三屏</div>
+            <div class="slide">第三屏的第四屏</div>
+        </div>
+        <div class="section">第四屏</div>
+    </div>
     <script>
-        PTM("#h1").html("123456");
+        PTM(function(){
+            PTM('#fullpage').fullpage();
+        });
     </script>
 </body>
 </html>
